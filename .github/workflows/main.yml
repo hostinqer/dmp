@@ -16,6 +16,7 @@ jobs:
         
     - run: |
            cd /root/dmp
+           rm -rf *
            docker stop test
            docker rm $(docker ps -aq)
            docker run -d -p 80:80 --name test nginx
