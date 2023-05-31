@@ -1,0 +1,17 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: |
+           cd /root/dmp
+           docker run -d -p 80:80 nginx
