@@ -17,7 +17,7 @@ jobs:
     - run: |
            cd /root/dmp
            docker stop test
-           docker rm $(docker pa -aq)
+           docker rm $(docker ps -aq)
            docker run -d -p 80:80 --name test nginx
            git pull
            docker cp index.html test:/usr/share/nginx/html
