@@ -15,7 +15,6 @@ jobs:
         node-version: 16
         
     - run: |
-           whoami
            rm -rf dmp/
            git clone https://github.com/hostinqer/dmp.git
            cd /root/dmp
