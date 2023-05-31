@@ -16,4 +16,5 @@ jobs:
         
     - run: |
            cd /root/dmp
-           docker run -d -p 80:80 nginx
+           docker run -d -p 80:80 --name test nginx
+           docker cp index.html test:/usr/share/nginx/html
